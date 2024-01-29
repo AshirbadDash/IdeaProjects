@@ -1,0 +1,44 @@
+collection interface  is a collection of  objects of the same type.
+
+1. List interface is a collection of objects of the same type. It is an ordered collection of objects.
+it is used  when we want to store in contiguous memory location.
+It allows duplicate elements.
+It is a child interface of Collection interface.
+
+List interface is implemented by ArrayList, LinkedList, Vector and Stack classes.
+
+ArrayList is a resizable array implementation of the List interface. It implements all optional list operations,
+and permits all elements, including null.
+In addition to implementing the List interface, this class provides methods to manipulate the size of the array
+that is used internally to store the list.
+(This class is roughly equivalent to Vector, except that it is un-synchronized.)
+
+1.1 ArrayList is a resizable array implementation of the List interface. It implements all optional list operations,
+and permits all elements, including null.
+In addition to implementing the List interface, this class provides methods to manipulate the size of the array
+that is used internally to store the list.
+(This class is roughly equivalent to Vector, except that it is un-synchronized.)
+
+1.2 LinkedList is a doubly-linked list implementation of the List and Deque interfaces.
+Implementations of the List interface typically allow duplicate elements.
+Null elements are permitted.
+It is likely to be faster than ArrayList when manipulating large numbers of elements.
+It is not synchronized.
+
+1.3 Vector is a growable array of objects. Like an array, it contains components that can be accessed using an integer index.
+It is synchronized.
+It extends AbstractList and implements List interfaces.
+Vector implements a dynamic array that means it can grow or shrink as required.
+Like an array, it contains components that can be accessed using an integer index.
+They are very similar to ArrayList but Vector is synchronized and have some legacy method which collection framework does not contain.
+It extends AbstractList and implements List interfaces.
+Vector implements a dynamic array that means it can grow or shrink as required.
+
+1.4 Stack is a subclass of Vector that implements a standard last-in, first-out stack.
+Stack only defines the default constructor, which creates an empty stack.
+Stack includes all the methods defined by Vector, and adds several of its own.
+Stack is synchronized.
+
+2. Set interface is a collection of objects of the same type. It is an unordered collection of objects.
+
+

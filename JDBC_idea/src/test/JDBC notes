@@ -1,0 +1,81 @@
+JDBC  is a Java API for accessing relational databases,
+but it doesn't provide any database access itself.
+It is an API that allows you to connect and execute queries to the database.
+
+You need to use a JDBC driver to connect to the database.
+
+The JDBC driver gives out the connection to the database
+ and implements the protocol for transferring the query and result between client and database.
+
+There are 4 types of JDBC drivers:
+1. JDBC-ODBC bridge driver
+2. Native-API driver (partially java driver)
+3. Network Protocol driver (fully java driver)
+4. Thin driver (fully java driver)
+
+Each driver has its own advantages and disadvantages.
+You should consider the following points while deciding which driver to be used.
+1. Type of DBMS(Database Management System) you are using
+2. Type of operating system you are using
+3. Network topology where JDBC is being used
+
+### JDBC-ODBC bridge driver
+The JDBC-ODBC bridge driver uses ODBC driver to connect to the database.
+The JDBC-ODBC bridge driver converts JDBC method calls into the ODBC function calls.
+This is now discouraged because of thin driver.
+
+### Native-API driver
+The Native API driver uses the client-side libraries of the database.
+The driver converts JDBC method calls into native calls of the database API.
+It is not written entirely in java.
+
+### Network Protocol driver
+The Network Protocol driver uses middleware (application server) that converts JDBC calls directly or indirectly into the vendor-specific database protocol.
+It is fully written in java.
+
+### Thin driver
+The thin driver converts JDBC calls directly into the vendor-specific database protocol.
+That is why it is known as thin driver.
+It is fully written in Java language.
+
+### JDBC API
+The JDBC API is a Java API that can access any kind of tabular data, especially data stored in a Relational Database.
+JDBC works with Java on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.
+This tutorial uses the MySQL Connector/J 5.1.30 driver to connect to a MySQL Server 5.6 database.
+
+### JDBC Driver
+A JDBC driver is a software component enabling a Java application to interact with a database.
+JDBC drivers are analogous to ODBC drivers, ADO.NET data providers, and OLE DB providers.
+
+To connect with individual databases, JDBC (the Java Database Connectivity API) requires drivers for each database.
+
+//JDBC COMPONENTS
+The JDBC API provides the following interfaces and classes −
+
+1. DriverManager: This class manages a list of database drivers. it has methods that are used to create a connection with a database.
+   It has a static method getConnection() that attempts to make a database connection to the given URL.
+   Matches connection requests from the java application with the proper database driver using communication sub protocol.
+
+2. Driver: This interface handles the communications with the database server.
+   You will interact directly with Driver objects very rarely.
+   Instead, you use DriverManager objects, which manages objects of this type.
+
+3. Connection: This interface with all methods for contacting a database.
+    the connection made using DriverManager is stored in Connection object.
+   The connection object represents communication context, i.e., all communication with database is through connection object only.
+
+4. Statement: You use objects created from this interface to submit the SQL statements to the database.
+ Some derived interfaces accept parameters in addition to executing stored procedures.
+ preparedStatement: This interface accepts input parameters at runtime.
+
+5. ResultSet: These objects hold data retrieved from a database after you execute an SQL query using Statement objects.
+   It acts as an iterator to allow you to move through its data.
+   the data is retrieved from database  as table from sql and stored in ResultSet object(instance).
+   it returns boolean value.
+
+
+6. SQLException: This class handles any errors that occur in a database application.
+
+
+
+
